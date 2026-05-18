@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Error Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="title">CODE ERROR GAME</h1>
+
+        <p class="subtitle">
+            Fix the code errors and unlock next levels
+        </p>
+
+        <div class="game-box">
+
+            <h2>Level 1 - C Language</h2>
+
+            <p class="question">
+                Fix the error in the code below:
+            </p>
+
+            <div class="code-box">
+                <pre>
+#include&lt;stdio.h&gt;
+
+int main() {
+
+    printf("Hello World")
+
+    return 0;
+}
+</pre>
+            </div>
+
+            <!-- TIMER ADD KIYA -->
+            <div class="timer">
+                Time Left: <span id="time">30</span>s
+            </div>
+
+            <textarea id="answer" placeholder="Write corrected code here..."></textarea>
+
+            <br>
+
+            <button onclick="checkAnswer()">
+                CHECK ANSWER
+            </button>
+
+            <br><br>
+
+            <button onclick="showHint()" class="hint-btn">
+                💡 HINT
+            </button>
+
+            <button onclick="nextLevel()" class="next-btn">
+                ⏭ NEXT LEVEL
+            </button>
+
+            <p id="hint"></p>
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <p id="progressText">Progress: 0%</p>
+
+            <p id="result"></p>
+
+            <div class="score-board">
+
+                <div class="card">
+                    <h2>XP</h2>
+                    <p id="xp">120</p>
+                </div>
+
+                <div class="card">
+                    <h2>Coins</h2>
+                    <p id="coins">50</p>
+                </div>
+
+                <div class="card">
+                    <h2>Completed Levels</h2>
+                    <p id="levels">1</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
